@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Dark Academia Shop</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-stone-900 text-stone-100 min-h-screen flex flex-col font-serif">
+
+  <!-- Navbar -->
+<nav class="bg-orange-950 shadow-md">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+    
+    <!-- Left side: Logo + Brand -->
+    <a href="/" class="flex items-center gap-3 group">
+      <img
+        src="logo.png"
+        alt="Rin Antiquary logo"
+        class="h-14 w-14 object-contain ring-stone-700 group-hover:ring-amber-300 transition shadow rounded"
+        loading="eager" fetchpriority="high"
+      />
+      <h1 class="text-2xl font-bold text-yellow-900 tracking-wide group-hover:text-amber-300 transition">
+        Rin Antiquary
+      </h1>
+    </a>
+    
+    <!-- Right side: Nav links -->
+    <ul class="flex space-x-6 text-yellow-900">
+      <li><a href="#" class="hover:text-amber-300 transition">Home</a></li>
+      <li><a href="#" class="hover:text-amber-300 transition">Category</a></li>
+      <li><a href="#" class="hover:text-amber-300 transition">Sale</a></li>
+      <li><a href="#" class="hover:text-amber-300 transition">Details</a></li>
+    </ul>
+
+  </div>
+</nav>
+  <!-- Main Content -->
+  <main class="flex-grow flex items-center justify-center ">
+    <div class=" bg-amber-900 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 p-4 gap-12 w-full">
+
+      <!-- Product 1 -->
+      <div class="bg-red-950 rounded-lg shadow-lg p-8 text-center border border-stone-700 hover:border-amber-400 hover:shadow-xl transition">
+        <img src="clock.jpeg" alt="Product 1" class="mx-auto shadow">
+        <h2 class="mt-4 text-lg font-semibold text-amber-300">Vintage Clock</h2>
+        <p class="text-stone-400 italic">$19.99</p>
+      </div>
+
+      <!-- Product 2 -->
+      <div class="bg-red-950 rounded-lg shadow-lg p-4 text-center border border-stone-700 hover:border-amber-400 hover:shadow-xl transition">
+        <img src="light.jpeg" alt="Product 2" class="mx-auto rounded-lg shadow">
+        <h2 class="mt-4 text-lg font-semibold text-amber-300">Chandelier Light</h2>
+        <p class="text-stone-400 italic">$29.99</p>
+      </div>
+
+      <!-- Product 3 -->
+      <div class="relative bg-stone-800 rounded-lg shadow-lg p-4 text-center border border-stone-700 hover:border-amber-400 hover:shadow-xl transition">
+        
+        <!-- Sold Out Badge -->
+        <span class="absolute top-2 right-2 bg-red-700 text-white text-xs font-semibold px-2 py-1 rounded shadow">
+          Sold Out
+        </span>
+
+        <img src="mirror.jpeg" alt="Product 3" class="mx-auto rounded-lg shadow opacity-60">
+        <h2 class="mt-4 text-lg font-semibold text-amber-300">Vintage Mirror</h2>
+        <p class="text-stone-400 italic line-through">$39.99</p>
+      </div>
+
+      <!-- Product 4 -->
+      <div class="bg-red-950 rounded-lg shadow-lg p-4 text-center border border-stone-700 hover:border-amber-400 hover:shadow-xl transition">
+        <img src="vase.jpeg" alt="Product 4" class="mx-auto rounded-lg shadow">
+        <h2 class="mt-4 text-lg font-semibold text-amber-300">Old Vase</h2>
+        <p class="text-orange-400 italic">$24.99</p>
+      </div>
+
+            <!-- Product 5 -->
+      <div class="relative bg-red-800 rounded-lg shadow-lg p-4 text-center border border-stone-700 hover:border-amber-400 hover:shadow-xl transition">
+        
+        <!-- Discount Badge -->
+        <span class="absolute top-2 right-2 bg-green-700 text-white text-xs font-semibold px-2 py-1 rounded shadow">
+          40% OFF
+        </span>
+
+        <img src="wand.jpeg" alt="Product 5" class="mx-auto rounded-lg shadow">
+        <h2 class="mt-4 text-lg font-semibold text-amber-300">Magic Wand</h2>
+        
+        <!-- Pricing -->
+        <p class="text-stone-400 italic line-through">$34.99</p>
+        <p class="text-green-400 font-semibold">$20.99</p>
+      </div>
+
+
+      <!-- Product 6 -->
+      <div class="bg-red-950 rounded-lg shadow-lg p-4 text-center border border-stone-700 hover:border-amber-400 hover:shadow-xl transition">
+        <img src="quill.jpeg" alt="Product 6" class="mx-auto rounded-lg shadow">
+        <h2 class="mt-4 text-lg font-semibold text-amber-300">Quill Pen</h2>
+        <p class="text-stone-400 italic">$44.99</p>
+      </div>
+
+            <!-- Product 7 -->
+      <div class="relative bg-red-800 rounded-lg shadow-lg p-4 text-center border border-stone-700 hover:border-amber-400 hover:shadow-xl transition">
+        
+        <!-- Limited Stock Badge -->
+        <span class="absolute top-2 right-2 bg-amber-600 text-white text-xs font-semibold px-2 py-1 rounded shadow animate-pulse">
+          Limited Stock – Grab Soon!
+        </span>
+
+        <img src="ring.jpeg" alt="Product 7" class="mx-auto rounded-lg shadow">
+        <h2 class="mt-4 text-lg font-semibold text-amber-300">Antique Ring</h2>
+        <p class="text-stone-400 italic">$59.99</p>
+      </div>
+
+
+      <!-- Product 8 -->
+      <div class="bg-red-950 rounded-lg shadow-lg p-4 text-center border border-stone-700 hover:border-amber-400 hover:shadow-xl transition">
+        <img src="shoes.jpeg" alt="Product 8" class="mx-auto rounded-lg shadow">
+        <h2 class="mt-4 text-lg font-semibold text-amber-300">Leather Shoes</h2>
+        <p class="text-stone-400 italic">$27.99</p>
+      </div>
+
+      <!-- Product 9 -->
+      <div class="bg-red-950 rounded-lg shadow-lg p-4 text-center border border-stone-700 hover:border-amber-400 hover:shadow-xl transition">
+        <img src="lamp.jpeg" alt="Product 9" class="mx-auto rounded-lg shadow">
+        <h2 class="mt-4 text-lg font-semibold text-amber-300">Antique Lamp</h2>
+        <p class="text-stone-400 italic">$59.99</p>
+      </div>
+
+    </div>
+  </main>
+
+
+  <!-- Footer -->
+  <footer class="bg-orange-950 border-t border-stone-700 text-yellow-900 py-4 mt-8">
+    <div class="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row justify-between items-center">
+      <p class="italic">&copy; 2025 My Shop. All rights reserved.</p>
+      <div class="flex space-x-4 mt-2 sm:mt-0">
+        <a href="#" class="hover:text-amber-300 transition">Privacy Policy</a>
+        <a href="#" class="hover:text-amber-300 transition">T&C</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
+

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Responsive layout</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class'
+    }
+  </script>
+</head>
+<body class="flex flex-col min-h-screen text-amber-800 dark:text-amber-100 transition-colors duration-300">
+
+  <!-- Fullscreen Background -->
+  <div class="relative h-screen w-full">
+    <img src="amber.jpg" alt="Background" class="absolute inset-0 w-full h-full object-cover opacity-70">
+
+    <!-- Dark overlay -->
+    <div class="absolute inset-0 bg-black/40"></div>
+
+    <!-- Navbar -->
+    <nav class="absolute top-0 left-0 w-full bg-amber-700/80 dark:bg-amber-900/80 text-amber-200 backdrop-blur-sm">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between h-16 items-center">
+          <!-- Logo -->
+           <a href="#" class="flex items-center gap-2 hover:text-gray-200">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+                      d="M12 7h.01m3.486 1.513h.01m-6.978 0h.01M6.99 12H7m9 4h2.706a1.957 1.957 0 0 0 1.883-1.325A9 9 0 1 0 3.043 12.89 9.1 9.1 0 0 0 8.2 20.1a8.62 8.62 0 0 0 3.769.9 2.013 2.013 0 0 0 2.03-2v-.857A2.036 2.036 0 0 1 16 16Z"/>
+            </svg>
+
+          <div class="text-xl font-bold">Rin's Arts</div>
+           </a>
+
+          <!-- Desktop Menu -->
+          <div class="hidden md:flex space-x-6 items-center">
+            
+            <!-- Home -->
+            <a href="#" class="flex items-center gap-2 hover:text-gray-200">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+                      d="M3 9.75L12 3l9 6.75V21a.75.75 0 01-.75.75H3.75A.75.75 0 013 21V9.75z"/>
+              </svg>
+              Home
+            </a>
+
+            <!-- About -->
+            <a href="#" class="flex items-center gap-2 hover:text-gray-200">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M5.121 17.804A9 9 0 1118.364 4.56 9 9 0 015.12 17.804zM12 12h.01M12 16h.01M12 8h.01"/>
+              </svg>
+              About
+            </a>
+
+            <!-- Admission -->
+            <a href="#" class="flex items-center gap-2 hover:text-amber-200">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+                      d="M12 14l9-5-9-5-9 5 9 5zm0 0v7"/>
+              </svg>
+              Admission
+            </a>
+
+            <!-- Qualification -->
+            <a href="#" class="flex items-center gap-2 hover:text-gray-200">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round"  stroke-linejoin="round" stroke-width="2"
+                      d="M12 3.87H4v16h8v-13h5v13h3v-16h-8Z"/>
+              </svg>
+
+              Qualification
+            </a>
+
+            <!-- 🌙 Dark Mode Toggle -->
+            <button id="dark-toggle" class="ml-4 px-3 py-1 rounded bg-amber-900 text-white hover:bg-amber-600 dark:bg-amber-200 dark:text-amber-900 dark:hover:bg-amber-300">
+              Dark/Light
+            </button>
+          </div>
+
+          <!-- Mobile Menu Button -->
+          <button id="menu-btn" class="md:hidden focus:outline-none">
+            <!-- Hamburger Icon -->
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div id="mobile-menu" class="hidden md:hidden bg-amber-700/90 dark:bg-amber-900/90">
+        <a href="#" class="flex items-center gap-2 px-4 py-2 hover:bg-blue-800 dark:hover:bg-blue-950">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+                  d="M3 9.75L12 3l9 6.75V21a.75.75 0 01-.75.75H3.75A.75.75 0 013 21V9.75z"/>
+          </svg>
+          Home
+        </a>
+        <a href="#" class="flex items-center gap-2 px-4 py-2 hover:bg-blue-800 dark:hover:bg-blue-950">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M5.121 17.804A9 9 0 1118.364 4.56 9 9 0 015.12 17.804zM12 12h.01M12 16h.01M12 8h.01"/>
+          </svg>
+          
+
+          About
+        </a>
+        <a href="#" class="flex items-center gap-2 px-4 py-2 hover:bg-blue-800 dark:hover:bg-blue-950">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+                  d="M12 14l9-5-9-5-9 5 9 5zm0 0v7"/>
+          </svg>
+          Admission
+        </a>
+        <a href="#" class="flex items-center gap-2 px-4 py-2 hover:bg-blue-800 dark:hover:bg-blue-950">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+  <path fill-rule="evenodd" d="M14 4.182A4.136 4.136 0 0 1 16.9 3c1.087 0 2.13.425 2.899 1.182A4.01 4.01 0 0 1 21 7.037c0 1.068-.43 2.092-1.194 2.849L18.5 11.214l-5.8-5.71 1.287-1.31.012-.012Zm-2.717 2.763L6.186 12.13l2.175 2.141 5.063-5.218-2.141-2.108Zm-6.25 6.886-1.98 5.849a.992.992 0 0 0 .245 1.026 1.03 1.03 0 0 0 1.043.242L10.282 19l-5.25-5.168Zm6.954 4.01 5.096-5.186-2.218-2.183-5.063 5.218 2.185 2.15Z" clip-rule="evenodd"/>
+</svg>
+
+          Qualification
+        </a>
+        
+        <!-- 🌙 Dark Mode Toggle (Mobile) -->
+        <button id="dark-toggle-mobile" class="block w-full text-left px-4 py-2 bg-gray-800 text-white hover:bg-gray-700 dark:bg-gray-200 dark:text-gray-900 dark:hover:bg-gray-300">
+          Dark/Light
+        </button>
+      </div>
+    </nav>
+
+    <!-- Centered Page Content -->
+    <main class="absolute inset-0 flex flex-col items-center justify-center text-center px-4">
+      <h1 class="text-4xl md:text-5xl font-bold text-amber-100 mb-6">Welcome to Rin Art School</h1>
+
+      <!-- Buttons Section -->
+      <div class="flex flex-wrap gap-4 justify-center">
+        <!-- Primary Button -->
+        <button class="px-6 py-2 rounded-lg bg-amber-600 text-amber-200 font-medium shadow hover:bg-amber-700 focus:outline-none focus:ring-2 focus:ring-amber-400">
+          Admission Form
+        </button>
+
+        <!-- Secondary Button -->
+        <button class="px-6 py-2 rounded-lg bg-amber-300 text-amber-700 font-medium shadow hover:bg-amber-400 focus:outline-none focus:ring-2 focus:ring-amber-400">
+          Infrastructure
+        </button>
+
+        <!-- Danger Button -->
+        <button class="px-6 py-2 rounded-lg bg-amber-900 text-white font-medium shadow hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-amber-400">
+          Cancel
+        </button>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="absolute bottom-0 left-0 w-full bg-amber-700/80 dark:bg-amber-900/80 text-white backdrop-blur-sm">
+      <div class="max-w-7xl mx-auto px-4 py-4 flex flex-col md:flex-row justify-between items-center text-center md:text-left">
+        <p>&copy; 2025 Rin Arts Website. All rights reserved.</p>
+        <div class="flex space-x-4 mt-2 md:mt-0">
+          <a href="#" class="hover:text-amber-200">Privacy Policy</a>
+          <a href="#" class="hover:text-amber-200">Terms</a>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Script -->
+  <script>
+    const btn = document.getElementById('menu-btn');
+    const menu = document.getElementById('mobile-menu');
+    const darkBtn = document.getElementById('dark-toggle');
+    const darkBtnMobile = document.getElementById('dark-toggle-mobile');
+    const html = document.documentElement;
+
+    // Mobile menu toggle
+    btn.addEventListener('click', () => {
+      menu.classList.toggle('hidden');
+    });
+
+    // Dark mode toggle
+    function toggleDarkMode() {
+      html.classList.toggle('dark');
+    }
+    darkBtn.addEventListener('click', toggleDarkMode);
+    darkBtnMobile.addEventListener('click', toggleDarkMode);
+  </script>
+</body>
+</html>
