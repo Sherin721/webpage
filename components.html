@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Amber Shop</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-amber-900 text-white flex flex-col min-h-screen">
+
+  <!-- Header -->
+<header class="bg-orange-950 p-4 flex justify-between items-center border-b border-stone-700">
+  <!-- Left: Logo + Shop Name -->
+  <div class="flex items-center space-x-3">
+    <img src="logo.png" alt="Logo" class="w-12 h-12 object-contain">
+    <h1 class="text-2xl font-bold text-amber-300">Amber Shop</h1>
+  </div>
+
+  <!-- Right: Cart -->
+  <div class="flex items-center space-x-2">
+    <!-- Cart Icon -->
+    <svg xmlns="http://www.w3.org/2000/svg"
+         viewBox="0 0 24 24"
+         fill="currentColor"
+         class="w-6 h-6 text-amber-700">
+      <path d="M2.25 2.25h1.386c.51 0 .955.343 1.09.835l.383 1.437h14.515a.75.75 0 01.728.927l-1.5 6a.75.75 0 01-.728.573H7.854l.44 1.65h10.706a.75.75 0 010 1.5H7.5a.75.75 0 01-.728-.573l-2.25-9a.75.75 0 01.728-.927h.145L4.136 3.585A2.25 2.25 0 002.25 2.25z"/>
+    </svg>
+    <span id="cart-count" class="text-amber-300 font-semibold">0</span>
+  </div>
+</header>
+
+
+  <!-- Main Products Grid -->
+  <main class="flex-grow p-8">
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+
+      <!-- ✅ Reusable Product Card -->
+      <div class="bg-red-950 shadow-lg p-4 text-center border border-stone-700 hover:border-amber-400 hover:shadow-xl transition rounded-lg">
+        <img src="clock2.jpg" alt="Vintage Clock" class="mx-auto shadow rounded w-56 h-56 object-cover">
+
+        <h2 class="mt-2 text-lg font-semibold text-amber-200">Vintage Clock</h2>
+        <p class="text-stone-400 italic">$78.99</p>
+        <button class="mt-4 px-4 py-2 rounded font-medium transition bg-amber-400 text-black hover:bg-amber-500 add-to-cart">
+          Add to Cart
+        </button>
+      </div>
+
+      <!-- Another Card -->
+      <div class="bg-red-950 shadow-lg p-4 text-center border border-stone-700 hover:border-amber-400 hover:shadow-xl transition rounded-lg">
+        <img src="watch.jpeg" alt="Luxury Watch" class="mx-auto shadow rounded">
+`        <h2 class="mt-2 text-lg font-semibold text-amber-200">Luxury Watch</h2>
+        <p class="text-stone-400 italic">$49.99</p>
+        <button class="mt-4 px-4 py-2 rounded font-medium transition bg-amber-400 text-black hover:bg-amber-500 add-to-cart">
+          Add to Cart
+        </button>
+      </div>
+
+      <!-- Another Card -->
+      <div class="bg-red-950 shadow-lg p-4 text-center border border-stone-700 hover:border-amber-400 hover:shadow-xl transition rounded-lg">
+        <img src="lamp.jpeg" alt="Antique Lamp" class="mx-auto shadow rounded">
+        <h2 class="mt-2 text-lg font-semibold text-amber-200">Antique Lamp</h2>
+        <p class="text-stone-400 italic">$29.99</p>
+        <button class="mt-4 px-4 py-2 rounded font-medium transition bg-amber-400 text-black hover:bg-amber-500 add-to-cart">
+          Add to Cart
+        </button>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-orange-950 border-t border-stone-700 text-yellow-900 py-4">
+    <div class="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row justify-between items-center">
+      <p class="italic">&copy; 2025 Amber Shop. All rights reserved.</p>
+      <div class="flex space-x-4 sm:mt-0">
+        <a href="#" class="hover:text-amber-300 transition">Privacy Policy</a>
+        <a href="#" class="hover:text-amber-300 transition">T&C's</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Script -->
+  <script>
+    let count = 0;
+    const cartCount = document.getElementById("cart-count");
+    document.querySelectorAll(".add-to-cart").forEach(btn => {
+      btn.addEventListener("click", () => {
+        count++;
+        cartCount.textContent = count;
+      });
+    });
+  </script>
+
+</body>
+</html>
