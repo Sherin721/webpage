@@ -3,59 +3,117 @@
 <head>
   <meta charset="UTF-8" />
   <title>Dark Academia Shop</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <!-- Tailwind CDN -->
+  <meta name="viewport" content="width=device-width">
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-stone-900 text-stone-100 min-h-screen flex flex-col font-serif">
+<body>
 
   <!-- Navbar -->
 <nav class="bg-orange-950 shadow-md">
-  <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+  <div class="max-w-7xl px-6 py-2s flex justify-between items-center">
     
-    <!-- Left side: Logo + Brand -->
-    <a href="/" class="flex items-center gap-3 group">
+    <!-- Left side -->
+    <a href="/" class="flex items-center group">
       <img
         src="logo.png"
         alt="Rin Antiquary logo"
         class="h-14 w-14 object-contain ring-stone-700 group-hover:ring-amber-300 transition shadow rounded"
         loading="eager" fetchpriority="high"
       />
-      <h1 class="text-2xl font-bold text-yellow-900 tracking-wide group-hover:text-amber-300 transition">
+      <h1 class="text-2xl font-bold text-yellow-800 tracking-wide group-hover:text-amber-300 transition">
         Rin Antiquary
       </h1>
     </a>
     
-    <!-- Right side: Nav links -->
-    <ul class="flex space-x-6 text-yellow-900">
-      <li><a href="#" class="hover:text-amber-300 transition">Home</a></li>
-      <li><a href="#" class="hover:text-amber-300 transition">Category</a></li>
-      <li><a href="#" class="hover:text-amber-300 transition">Sale</a></li>
-      <li><a href="#" class="hover:text-amber-300 transition">Details</a></li>
-    </ul>
+    <!-- Right side -->
+<ul class="flex space-x-6 font-bold text-yellow-800">
+  <li>
+    <a href="#" class="flex items-center hover:text-amber-300 transition">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+              d="M3 9.75L12 3l9 6.75V21a.75.75 0 01-.75.75H3.75A.75.75 0 013 21V9.75z"/>
+      </svg>
+      Home
+    </a>
+  </li>
+
+  <li>
+    <a href="#" class="flex items-center hover:text-amber-300 transition">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+               d="M18 6H6m12 4H6m12 4H6m12 4H6"/>
+      </svg>
+      Category
+    </a>
+  </li>
+
+  <li>
+    <a href="#" class="flex items-center hover:text-amber-300 transition">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+              d="M8.891 15.107 15.11 8.89m-5.183-.52h.01m3.089 7.254h.01M14.08 3.902a2.849 2.849 0 0 0 2.176.902 2.845 2.845 0 0 1 2.94 2.94 2.849 2.849 0 0 0 .901 2.176 2.847 2.847 0 0 1 0 4.16 2.848 2.848 0 0 0-.901 2.175 2.843 2.843 0 0 1-2.94 2.94 2.848 2.848 0 0 0-2.176.902 2.847 2.847 0 0 1-4.16 0 2.85 2.85 0 0 0-2.176-.902 2.845 2.845 0 0 1-2.94-2.94 2.848 2.848 0 0 0-.901-2.176 2.848 2.848 0 0 1 0-4.16 2.849 2.849 0 0 0 .901-2.176 2.845 2.845 0 0 1 2.941-2.94 2.849 2.849 0 0 0 2.176-.901 2.847 2.847 0 0 1 4.159 0Z"/>
+      </svg>
+      Sale
+    </a>
+  </li>
+
+  <li>
+    <a href="#" class="flex items-center hover:text-amber-300 transition">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+              d="M2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10S2 17.523 2 12Zm11-4a1 1 0 1 0-2 0v5a1 1 0 1 0 2 0V8Zm-1 7a1 1 0 1 0 0 2h.01a1 1 0 1 0 0-2H12Z" clip-rule="evenodd"/>
+      </svg>
+      Details
+    </a>
+  </li>
+  <div class="flex items-center space-x-2">
+  <!-- SVG Cart Icon -->
+  <svg xmlns="http://www.w3.org/2000/svg" 
+       fill="none" 
+       viewBox="0 0 24 24" 
+       stroke-width="2" 
+       stroke="currentColor" 
+       class="w-6 h-6 text-amber-700">
+    <path stroke-linecap="round" 
+          stroke-linejoin="round" 
+          d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2 9m13-9l2 9m-5-9V6a2 2 0 10-4 0v7" />
+  </svg>
+  <span class="text-amber-700 font-semibold">0</span>
+</div>
+
+
+</ul>
 
   </div>
 </nav>
   <!-- Main Content -->
-  <main class="flex-grow flex items-center justify-center ">
-    <div class=" bg-amber-900 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 p-4 gap-12 w-full">
+  <main class="flex items-center justify-center">
+  <div class="bg-amber-900 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 py-4 px-6 gap-6 w-full">
 
-      <!-- Product 1 -->
-      <div class="bg-red-950 rounded-lg shadow-lg p-8 text-center border border-stone-700 hover:border-amber-400 hover:shadow-xl transition">
-        <img src="clock.jpeg" alt="Product 1" class="mx-auto shadow">
-        <h2 class="mt-4 text-lg font-semibold text-amber-300">Vintage Clock</h2>
-        <p class="text-stone-400 italic">$19.99</p>
-      </div>
+
+      <!-- Product 1 --> 
+      <div class="bg-red-950 shadow-lg p-4 text-center border border-stone-700 hover:border-amber-400 hover:shadow-xl transition">
+  <img src="clock.jpeg" alt="Product 1" class="mx-auto shadow">
+  <h2 class="mt-2 text-base font-medium text-amber-200">Vintage Clock</h2>
+  <p class="text-stone-400 italic">$19.99</p>
+  <button class="mt-2 bg-amber-700 text-black px-3 hover:bg-amber-500 transition">
+    Add to Cart
+  </button>
+</div>
+
 
       <!-- Product 2 -->
-      <div class="bg-red-950 rounded-lg shadow-lg p-4 text-center border border-stone-700 hover:border-amber-400 hover:shadow-xl transition">
+      <div class="bg-red-950 shadow-lg p-4 text-center border border-stone-700 hover:border-amber-400 hover:shadow-xl transition">
         <img src="light.jpeg" alt="Product 2" class="mx-auto rounded-lg shadow">
         <h2 class="mt-4 text-lg font-semibold text-amber-300">Chandelier Light</h2>
         <p class="text-stone-400 italic">$29.99</p>
+        <button class="mt-2 bg-amber-700 text-black px-3 hover:bg-amber-500 transition">
+    Add to Cart
+  </button>
       </div>
 
       <!-- Product 3 -->
-      <div class="relative bg-stone-800 rounded-lg shadow-lg p-4 text-center border border-stone-700 hover:border-amber-400 hover:shadow-xl transition">
+      <div class="relative bg-stone-700 shadow-lg p-4 text-center border border-stone-700 hover:border-amber-950 hover:shadow-xl transition">
         
         <!-- Sold Out Badge -->
         <span class="absolute top-2 right-2 bg-red-700 text-white text-xs font-semibold px-2 py-1 rounded shadow">
@@ -65,17 +123,24 @@
         <img src="mirror.jpeg" alt="Product 3" class="mx-auto rounded-lg shadow opacity-60">
         <h2 class="mt-4 text-lg font-semibold text-amber-300">Vintage Mirror</h2>
         <p class="text-stone-400 italic line-through">$39.99</p>
+        <button class="mt-2 bg-amber-900 text-black line-through px-3 hover:bg-amber-950 transition">
+    Add to Cart
+  </button>
+        <div class="text-yellow-700">Restock soon</div>
       </div>
 
       <!-- Product 4 -->
-      <div class="bg-red-950 rounded-lg shadow-lg p-4 text-center border border-stone-700 hover:border-amber-400 hover:shadow-xl transition">
+      <div class="bg-red-950 shadow-lg p-4 text-center border border-stone-700 hover:border-amber-400 hover:shadow-xl transition">
         <img src="vase.jpeg" alt="Product 4" class="mx-auto rounded-lg shadow">
         <h2 class="mt-4 text-lg font-semibold text-amber-300">Old Vase</h2>
         <p class="text-orange-400 italic">$24.99</p>
+        <button class="mt-2 bg-amber-700 text-black px-3 hover:bg-amber-500 transition">
+    Add to Cart
+  </button>
       </div>
 
             <!-- Product 5 -->
-      <div class="relative bg-red-800 rounded-lg shadow-lg p-4 text-center border border-stone-700 hover:border-amber-400 hover:shadow-xl transition">
+      <div class="relative bg-red-800 shadow-lg p-4 text-center border border-stone-700 hover:border-amber-400 hover:shadow-xl transition">
         
         <!-- Discount Badge -->
         <span class="absolute top-2 right-2 bg-green-700 text-white text-xs font-semibold px-2 py-1 rounded shadow">
@@ -88,42 +153,57 @@
         <!-- Pricing -->
         <p class="text-stone-400 italic line-through">$34.99</p>
         <p class="text-green-400 font-semibold">$20.99</p>
+        <button class="mt-2 bg-amber-600 text-black px-3 hover:bg-amber-500 transition">
+    Add to Cart
+  </button>
       </div>
 
 
       <!-- Product 6 -->
-      <div class="bg-red-950 rounded-lg shadow-lg p-4 text-center border border-stone-700 hover:border-amber-400 hover:shadow-xl transition">
+      <div class="bg-red-950 shadow-lg p-4 text-center border border-stone-700 hover:border-amber-400 hover:shadow-xl transition">
         <img src="quill.jpeg" alt="Product 6" class="mx-auto rounded-lg shadow">
         <h2 class="mt-4 text-lg font-semibold text-amber-300">Quill Pen</h2>
         <p class="text-stone-400 italic">$44.99</p>
+        <button class="mt-2 bg-amber-700 text-black px-3 hover:bg-amber-500 transition">
+    Add to Cart
+  </button>
       </div>
 
             <!-- Product 7 -->
-      <div class="relative bg-red-800 rounded-lg shadow-lg p-4 text-center border border-stone-700 hover:border-amber-400 hover:shadow-xl transition">
+      <div class="relative bg-red-800 shadow-lg p-4 text-center border border-stone-700 hover:border-amber-400 hover:shadow-xl transition">
         
         <!-- Limited Stock Badge -->
-        <span class="absolute top-2 right-2 bg-amber-600 text-white text-xs font-semibold px-2 py-1 rounded shadow animate-pulse">
+        <span class="absolute top-2 right-2 bg-amber-600 text-white text-xs font-semibold px-2 py-1 rounded shadow">
           Limited Stock – Grab Soon!
         </span>
 
         <img src="ring.jpeg" alt="Product 7" class="mx-auto rounded-lg shadow">
         <h2 class="mt-4 text-lg font-semibold text-amber-300">Antique Ring</h2>
         <p class="text-stone-400 italic">$59.99</p>
+        <button class="mt-2 bg-amber-700 text-black px-3 hover:bg-amber-500 transition">
+    Add to Cart
+  </button>
       </div>
 
 
       <!-- Product 8 -->
-      <div class="bg-red-950 rounded-lg shadow-lg p-4 text-center border border-stone-700 hover:border-amber-400 hover:shadow-xl transition">
+      <div class="bg-red-950 shadow-lg p-4 text-center border border-stone-700 hover:border-amber-400 hover:shadow-xl transition">
         <img src="shoes.jpeg" alt="Product 8" class="mx-auto rounded-lg shadow">
         <h2 class="mt-4 text-lg font-semibold text-amber-300">Leather Shoes</h2>
         <p class="text-stone-400 italic">$27.99</p>
+        <button class="mt-2 bg-amber-700 text-black px-3 hover:bg-amber-500 transition">
+    Add to Cart
+  </button>
       </div>
 
       <!-- Product 9 -->
-      <div class="bg-red-950 rounded-lg shadow-lg p-4 text-center border border-stone-700 hover:border-amber-400 hover:shadow-xl transition">
+      <div class="bg-red-950 shadow-lg p-4 text-center border border-stone-700 hover:border-amber-400 hover:shadow-xl transition">
         <img src="lamp.jpeg" alt="Product 9" class="mx-auto rounded-lg shadow">
         <h2 class="mt-4 text-lg font-semibold text-amber-300">Antique Lamp</h2>
         <p class="text-stone-400 italic">$59.99</p>
+        <button class="mt-2 bg-amber-700 text-black px-3 hover:bg-amber-500 transition">
+    Add to Cart
+  </button>
       </div>
 
     </div>
@@ -131,12 +211,12 @@
 
 
   <!-- Footer -->
-  <footer class="bg-orange-950 border-t border-stone-700 text-yellow-900 py-4 mt-8">
+  <footer class="bg-orange-950 border-t border-stone-700 text-yellow-900 py-4">
     <div class="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row justify-between items-center">
       <p class="italic">&copy; 2025 My Shop. All rights reserved.</p>
-      <div class="flex space-x-4 mt-2 sm:mt-0">
+      <div class="flex space-x-4 sm:mt-0">
         <a href="#" class="hover:text-amber-300 transition">Privacy Policy</a>
-        <a href="#" class="hover:text-amber-300 transition">T&C</a>
+        <a href="#" class="hover:text-amber-300 transition">T&C's</a>
       </div>
     </div>
   </footer>
